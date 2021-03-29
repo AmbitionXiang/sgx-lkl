@@ -146,7 +146,7 @@ ${HOST_MUSL}/.git ${LKL}/.git ${SGXLKL_LIBC_SRC_DIR}/.git:
 update-git-submodules:
 	[ "$(FORCE_SUBMODULES_UPDATE)" = "false" ] || git submodule update --progress
 	# Initialise the missing Open Enclave submodules
-	cd $(OE_SUBMODULE) && git submodule update --recursive --progress --init
+	cd $(OE_SUBMODULE) && git submodule update --init --recursive --progress
 
 # Git pre-commit hook installation
 install-git-pre-commit-hook: scripts/pre-commit
