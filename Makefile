@@ -141,12 +141,12 @@ ${BUILD_DIR} ${TOOLS_BUILD} ${LKL_BUILD} ${HOST_LIBC_BLD_DIR} ${SGXLKL_LIBC_BLD_
 
 # Submodule initialisation (one-shot after git clone)
 ${HOST_MUSL}/.git ${LKL}/.git ${SGXLKL_LIBC_SRC_DIR}/.git:
-	[ "$(FORCE_SUBMODULES_VERSION)" = "true" ] || git submodule update --progress --init $($@:.git=)
+	[ "$(FORCE_SUBMODULES_VERSION)" = "true" ] || git submodule update --init $($@:.git=)
 
 update-git-submodules:
-	[ "$(FORCE_SUBMODULES_UPDATE)" = "false" ] || git submodule update --progress
+	[ "$(FORCE_SUBMODULES_UPDATE)" = "false" ] || git submodule update
 	# Initialise the missing Open Enclave submodules
-	cd $(OE_SUBMODULE) && git submodule update --init --recursive --progress
+	cd $(OE_SUBMODULE) && git submodule update --init --recursive
 
 # Git pre-commit hook installation
 install-git-pre-commit-hook: scripts/pre-commit
