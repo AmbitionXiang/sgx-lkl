@@ -11,7 +11,7 @@
 	branch = oe_port
 [submodule "openenclave"]
 	path = openenclave
-	url = https://hub.fastgit.org/openenclave/openenclave.git
+	url = https://hub.fastgit.org/AmbitionXiang/openenclave.git
 	branch = feature/sgx-lkl-support
 [submodule "third_party/argon2"]
 	path = third_party/argon2
