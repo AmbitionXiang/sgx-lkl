@@ -1,6 +1,6 @@
 [submodule "lkl"]
 	path = lkl
-	url = https://github.com.cnpmjs.org/lsds/lkl.git
+	url = https://hub.fastgit.org/lsds/lkl.git
 	branch = upstream-refactor
 [submodule "host-musl"]
 	path = host-musl
